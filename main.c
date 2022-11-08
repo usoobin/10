@@ -6,19 +6,24 @@
 
 void main(void)
 {
-	char src[] = "The worst things to eat before you sleep";
-	char dst[100];
+	FILE * fp ;
+	char str[30];
+	int i;
+	
+	fp = fopen("sample.txt","w");
+	
+		
+	for (i=0; i<3; i++)
+	{
+		printf("input a word : ");
+		scanf("%s", str);
+		fprintf(fp,"%s\n",str);
+	}
 
-
-	strcpy(dst,src);
-
-
-	printf("copied string : %s", dst);
+	
+	fclose(fp);
 	
 	return 0;
-
-	
-
 
 
 }
