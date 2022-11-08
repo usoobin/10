@@ -7,19 +7,17 @@
 void main(void)
 {
 	FILE * fp ;
-	char str[30];
+	char c;
 	int i;
 	
-	fp = fopen("sample.txt","w");
+	fp = fopen("sample.txt","r");
 	
 		
-	for (i=0; i<3; i++)
-	{
-		printf("input a word : ");
-		scanf("%s", str);
-		fprintf(fp,"%s\n",str);
-	}
-
+ 	while( c != EOF)
+ 	{	//문자변수 = fgetc(파일포인터) 
+ 		c = fgetc(fp);
+	 	putchar(c); 
+	}	
 	
 	fclose(fp);
 	
