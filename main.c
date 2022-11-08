@@ -13,9 +13,9 @@ void main(void)
 	fp = fopen("sample.txt","r");
 	
 		
- 	while( c != EOF)
+ 	while(( c = fgetc(fp)) != EOF)
  	{	//문자변수 = fgetc(파일포인터) 
- 		c = fgetc(fp);
+ 		
 	 	putchar(c); 
 	}	
 	
