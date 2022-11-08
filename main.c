@@ -8,15 +8,15 @@ void main(void)
 {
 	FILE * fp ;
 	char c;
-	int i;
+	char str[30];
 	
 	fp = fopen("sample.txt","r");
 	
 		
- 	while(( c = fgetc(fp)) != EOF)
+ 	while(fgets(str,30,fp) != NULL)
  	{	//문자변수 = fgetc(파일포인터) 
- 		
-	 	putchar(c); 
+ 		printf("%s",str);
+	 	
 	}	
 	
 	fclose(fp);
